@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Show food and recipes">
+    <meta name="keywords" content="Food,طعام,Recipes,Meals,Ingredients">
+    <link rel="shortcut icon" href="imgs/Yummy-Logo.png" type="image/x-icon">
+    <title>Yummy - Food</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body class="bg-[#161616]">
+
+    <aside class="fixed top-0 left-0 bottom-0 flex">
+        <div class="sideBar bg-[#161616] relative right-[75.75%] flex">
+            <div class="autherSide px-4 py-10 text-slate-50 flex flex-col justify-between">
+                <div class="links flex flex-col space-y-7 overflow-hidden pb-10">
+                    <a class="sideBar-link relative top-[120%]" href="#search">Search</a>
+                    <a class="sideBar-link relative top-[120%]" href="#categories">Categories</a>
+                    <a class="sideBar-link relative top-[120%]" href="#area">Area</a>
+                    <a class="sideBar-link relative top-[120%]" href="#ingredients">Ingredients</a>
+                    <a class="sideBar-link relative top-[120%]" href="#contactUs">Contact Us</a>
+                </div>
+                <footer class="text-gray-500 pe-4">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-x-twitter px-2"></i>
+                    <i class="fa-solid fa-globe"></i>
+                    <p class="leading-tight text-sm">Copy right Â© 2024 All Rights <br> Reserved. 
+                        <span class="text-base uppercase bg-slate-50 px-1 rounded-md">Karim Hisham</span>
+                    </p>
+                </footer>
+            </div>
+
+            <div class="mainBar relative bg-slate-50 w-[75px] h-full flex flex-col justify-between items-center">
+                <img src="../imgs/Yummy-Logo.png" class="w-12 mt-2" alt="Yummy-Logo">
+                <i class="fas fa-bars fa-2x cursor-pointer"></i>
+                <i class="fas fa-close fa-2x cursor-pointer hidden"></i>
+                <div class="group-icons flex flex-col">
+                    <i class="fa-solid fa-globe py-2"></i>
+                    <i class="fa-solid fa-share-nodes pb-3"></i>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div class="meals container my-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
+        <div class="loadScreen fixed inset-0 bg-slate-800 opacity-50 z-[70] flex items-center justify-center">
+            <span class="loader"></span>
+        </div>
+    </div>
+
+    <div class="datails container mb-6 hidden">
+        <div class="loadScreen fixed inset-0 bg-slate-800 opacity-50 z-[70] flex items-center justify-center">
+            <span class="loader"></span>
+        </div>
+    </div>
+
+    <div id="search" class="container overflow-auto hidden">
+        <div class="inputs relative grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+            <div class="mealName relative">
+                <input class="bg-inherit text-slate-50 p-2 border-b-[1px] border-slate-50 focus:outline-none
+                placeholder:text-zinc-500 w-full" type="text" placeholder="Search By name ...">
+                <i class="fa-solid fa-xmark text-sky-900 absolute translate-y-3/4 right-2 cursor-pointer hidden"></i>
+            </div>
+
+            <div class="mealLetter relative">
+                <input class="bg-inherit text-slate-50 p-2 border-b-[1px] border-slate-50 focus:outline-none
+                placeholder:text-zinc-500 w-full" type="text" maxlength="1" placeholder="Search By One Letter ...">
+                <i class="fa-solid fa-xmark text-sky-900 absolute translate-y-3/4 right-2 cursor-pointer hidden"></i>
+            </div>
+        </div>
+
+        <div class="searchMeals grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-20 mb-6 hidden">
+            <div class="loadScreen fixed inset-0 bg-slate-800 opacity-50 z-[70] flex items-center justify-center">
+                <span class="loader"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="categories" class="container pt-20 mb-6 hidden">
+        <div class="categoray grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div class="loadScreen fixed inset-0 bg-slate-800 opacity-50 z-[70] flex items-center justify-center">
+                <span class="loader"></span>
+            </div>
+        </div>
+        <div class="categorayMeals grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6 hidden">
+            <div class="loadScreen fixed inset-0 bg-slate-800 opacity-50 z-[70] flex items-center justify-center">
+                <span class="loader"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="area" class="container pt-16 mb-6 hidden">
+        <div class="areaItem relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div class="loadScreen fixed inset-0 bg-slate-800 opacity-50 z-[70] flex items-center justify-center">
+                <span class="loader"></span>
+            </div>
+        </div>
+        <div class="areaMeals grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6 hidden">
+            <div class="loadScreen fixed inset-0 bg-slate-800 opacity-50 z-[70] flex items-center justify-center">
+                <span class="loader"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="ingredients" class="container pt-16 mb-6 hidden">
+        <div class="ingredientsItem relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div class="loadScreen fixed inset-0 bg-slate-800 opacity-50 z-[70] flex items-center justify-center">
+                <span class="loader"></span>
+            </div>
+        </div>
+
+        <div class="ingredientsMeals grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6 hidden">
+            <div class="item rounded-lg box-border h-52 relative w-full overflow-hidden group">
+                <img src="../imgs/Yummy/vwuprt1511813703.jpg" class="w-full rounded-lg h-full" alt="Yummy">
+                <div class="layer w-full text-center flex flex-col items-center justify-center bg-[rgba(255,255,255,0.5)] cursor-pointer
+                backdrop-blur-sm absolute inset-x-0 bottom-[-100%] top-[110%] group-hover:top-0 group-hover:bottom-0 duration-700 rounded-lg px-2 leading-tight">
+                <h2 class="text-2xl font-semibold capitalize">nanaimo bars</h2></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactUs" class="container mb-6  flex flex-col items-center hidden">
+        <h2 class="text-slate-50 text-[40px] font-semibold text-center mt-16">Contact us</h2>
+        
+        <form class="grid grid-cols-1 lg:grid-cols-2 gap-10 gap-y-14 mt-16 mb-20 w-full">
+            <div class="name relative flex flex-col items-center">
+                <input id="nameInput" class="bg-inherit text-slate-50 p-2 border-b-[1px] border-slate-50 focus:outline-none
+                placeholder:text-zinc-500 text-center w-full" type="text" placeholder="Enter Your Name ...">
+                <i class="fas fa-check text-green-600 text-xl absolute translate-y-1/4 right-3 hidden"></i>
+                <i class="fas fa-exclamation-circle text-red-600 text-lg absolute translate-y-1/4 right-3 hidden"></i>
+                <p class="alert-danger absolute top-[105%] hidden">Special Characters and Numbers not allowed ...</p>
+            </div>
+
+            <div class="email relative flex flex-col items-center">
+                <input id="emailInput" class="bg-inherit text-slate-50 p-2 border-b-[1px] border-slate-50 focus:outline-none
+               placeholder:text-zinc-500 text-center w-full" type="email" placeholder="Enter Your E-mail ...">
+                <i class="fas fa-check text-green-600 text-xl absolute translate-y-1/4 right-3 hidden"></i>
+                <i class="fas fa-exclamation-circle text-red-600 text-lg absolute translate-y-1/4 right-3 hidden"></i>
+                <p class="alert-danger absolute top-[105%] hidden">Enter valid email. *Ex: xxx@yyy.zzz ...</p>
+            </div>
+
+            <div class="phone relative flex flex-col items-center">
+                <input id="phoneInput" class="bg-inherit text-slate-50 p-2 border-b-[1px] border-slate-50 focus:outline-none
+               placeholder:text-zinc-500 text-center w-full" type="tel" placeholder="Enter Your Phone Number ...">
+                <i class="fas fa-check text-green-600 text-xl absolute translate-y-1/4 right-3 hidden"></i>
+                <i class="fas fa-exclamation-circle text-red-600 text-lg absolute translate-y-1/4 right-3 hidden"></i>
+                <p class="alert-danger absolute top-[105%] hidden">Enter valid Phone Number ...</p>
+            </div>
+            
+            <div class="age relative flex flex-col items-center">
+                <input id="ageInput" class="bg-inherit text-slate-50 p-2 border-b-[1px] border-slate-50 focus:outline-none
+               placeholder:text-zinc-500 text-center w-full" type="text" placeholder="Enter Your Age ...">
+                <i class="fas fa-check text-green-600 text-xl absolute translate-y-1/4 right-3 hidden"></i>
+                <i class="fas fa-exclamation-circle text-red-600 text-lg absolute translate-y-1/4 right-3 hidden"></i>
+                <p class="alert-danger absolute top-[105%] hidden">Enter valid Age ...</p>
+            </div>
+            
+            <div class="pass relative flex flex-col items-center">
+                <input id="passwordInput" class="bg-inherit text-slate-50 p-2 border-b-[1px] border-slate-50 focus:outline-none
+               placeholder:text-zinc-500 text-center w-full" type="password" placeholder="Enter Password ...">
+                <i class="fas fa-check text-green-600 text-xl absolute translate-y-1/4 right-3 hidden"></i>
+                <i class="fas fa-exclamation-circle text-red-600 text-lg absolute translate-y-1/4 right-3 hidden"></i>
+                <p class="alert-danger absolute top-[105%] hidden">Enter valid password *Minimum eight characters, at least one letter and one number:* ...</p>
+            </div>
+            
+            <div class="rePass relative flex flex-col items-center">
+                <input id="rePassword" class="bg-inherit text-slate-50 p-2 border-b-[1px] border-slate-50 focus:outline-none
+               placeholder:text-zinc-500 text-center w-full" type="password" placeholder="Enter Repassword ...">
+                <i class="fas fa-check text-green-600 text-xl absolute translate-y-1/4 right-3 hidden"></i>
+                <i class="fas fa-exclamation-circle text-red-600 text-lg absolute translate-y-1/4 right-3 hidden"></i>
+                <p class="alert-danger absolute top-[105%] hidden">Enter valid Repassword ...</p>
+            </div>
+        </form>
+
+        <button class="bg-inherit border-2 border-amber-500 px-5 py-2 rounded-lg text-amber-500 hover:bg-amber-500 hover:text-slate-50 
+        duration-300 disabled:border-amber-800 disabled:text-amber-800 disabled:hover:bg-inherit" disabled>Submit</button>
+    </div>
+
+    <div class="loadScreen fixed inset-0 bg-slate-800 opacity-50 z-[70] flex items-center justify-center">
+        <span class="loader"></span>
+    </div>
+
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
